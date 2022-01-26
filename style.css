@@ -119,7 +119,7 @@
 
 #profile-pic {
     width: 50%;
-    background-image: url('./Assets/vector.png');
+    background-image: url('https://github.com/AmanRohi369/portfolio-web/blob/master/Assets/vector.png');
     background-repeat: no-repeat;
     background-size: cover;
     /* object-fit: cover; */
@@ -273,7 +273,7 @@
 
 
 #contact-sec{
-    background-image:url("/Assets/GettyImages-1159378453_470591_sc87er.jpg");
+    background-image:url("https://github.com/AmanRohi369/portfolio-web/blob/master/Assets/GettyImages-1159378453_470591_sc87er.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
