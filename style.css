@@ -1,0 +1,522 @@
+/* font loaded  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:wght@600&display=swap');
+/* General Formatting */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+
+}
+
+/* Navbar Styling .. */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    /* border-bottom: 1px solid lightgray; */
+    z-index: 2;
+    padding-top: 10px;
+}
+
+#navbar-div {
+    width: 80%;
+    height: 100%;
+    font-size: 1.4rem;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right>a {
+    margin-right: 2vw;
+}
+#name{
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Home Styling */
+    
+
+#Home {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+#info-box {
+    padding-top: 5%;
+    width: 50%;
+}
+
+#info-box>div {
+    margin-bottom: 3rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-family: 'Ubuntu';
+    color:#192a56;
+
+}
+
+.about {
+    font-size: 1.3rem;
+    color: #445480;
+    line-height: 30px;
+}
+
+.btn {
+    padding: 0.5em 1em;
+    font-size: 1.3rem;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid white;
+    background:linear-gradient(to bottom , yellow,rgb(230, 177, 3));
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+    color: white;
+    background:linear-gradient(to bottom , #6c5ce7,#5245ae);
+    background-color: #6c5ce7;
+}
+
+/* profile section pic */
+#alt-profile-sec{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.alt-profile{
+    width:250px;
+    height:250px;
+    display: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px lightgray;
+    
+}
+.alt-profile img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
+
+#profile-pic {
+    width: 50%;
+    background-image: url('./Assets/vector.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* object-fit: cover; */
+}
+
+#cover {
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+#cover img {
+    object-fit: cover;
+    width: 100%;
+
+
+}
+
+
+/* hobbies styling  */
+
+#Hobbies {
+    padding: 40px 100px 80px;
+    margin-bottom: 80px;
+    background: linear-gradient(to right, #4ca1af, #c4e0e5);
+
+
+}
+
+#hobby-main {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.h-elem i, #bad {
+    font-size: 5rem;
+    margin-left: 10px;
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+#bad {
+    width: 65px;
+    height: 65px;
+}
+
+.h-elem p {
+    font-size: 1.5rem;
+    font-family: 'Ubuntu';
+    margin-top: 15px;
+    text-align: center;
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(10%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    75% {
+        transform: translateY(-10%);
+    }
+
+}
+
+/* Skills Section */
+
+#Skills{
+    margin-bottom: 100px;
+    padding:70px 100px;
+}
+#skills-level-window {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .skill-bar {
+    margin: 0px 24px;
+    width: 15rem;
+    height: 2.6rem;
+    border-radius: 200px;
+    background-color: rgb(201, 193, 193);
+  }
+  .skill-bar > div {
+    border-radius: 20px 0px 0px 20px;
+  }
+  .skill-name {
+    margin-left: 15px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.994);
+    font-size: 1.2rem;
+    font-family: 'ubuntu';
+  }
+  .skill-bar1 {
+    width: 92%;
+    height: inherit;
+    background-color: rgb(252, 119, 96);
+    padding: 0.1px;
+  }
+  .skill-bar2 {
+    width: 80%;
+    height: inherit;
+    background-color: #e67e22;
+    padding: 0.1px;
+  }
+  .skill-bar3 {
+    width: 50%;
+    height: inherit;
+    background-color: rgb(241, 57, 88);
+    padding: 0.1px;
+  }
+  .skill-bar4 {
+    width: 80%;
+    height: inherit;
+    background-color: rgb(24, 243, 243);
+    padding: 0.1px;
+  }
+  .skill-bar5 {
+    width: 90%;
+    height: inherit;
+    background-color: rgb(224, 49, 157);
+    padding: 0.1px;
+  }
+  .skill-bar6 {
+    width: 70%;
+    height: inherit;
+    background-color: rgb(11, 25, 155);
+    padding: 0.1px;
+  }
+  .skill-bar7 {
+    width: 90%;
+    height: inherit;
+    background-color: rgb(14, 190, 29);
+    padding: 0.1px;
+  }
+
+/* Contact  Me Styling  */
+
+
+#contact-sec{
+    background-image:url("/Assets/GettyImages-1159378453_470591_sc87er.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* background: linear-gradient(to right, #EF629F, #EECDA3);*/
+    position: relative;
+    padding:80px 100px;
+    z-index:-2;
+}
+
+.overlap{
+    background-color:rgba(0,0,0,0.8);
+    z-index:-1;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+}
+
+.container{
+    background: linear-gradient(to right, #C4E0E5, #4CA1AF); 
+    display:flex;
+    gap:10rem;
+    justify-content:center;
+}
+
+.soc-icon{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.soc-heading{
+    font-size: 1.5rem;
+    color:#130f40;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.phone,.mail{
+    display: flex;
+    gap:15px;
+}
+.in-icon{
+    font-size: 1.2rem;
+}
+.desc{
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+
+}
+#name-soc{
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+
+}
+.fa-linkedin{
+    color:rgb(14, 117, 172)
+}
+
+
+
+
+
+/* General Classes */
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 50px;
+}
+
+.section-heading * {
+    font-size: 3.6rem;
+    color: #4c6ef5;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-heading p {
+    font-family: "ubuntu";
+}
+.section-heading img{
+    width:45px;
+    height:45px;
+}
+
+
+
+.link-tag {
+    text-decoration: none;
+    color: black;
+
+}
+
+.sep-container {
+    padding-top: 5rem;
+}
+
+.card{
+    transform: translateY(-50px);
+    width:400px;
+    background-color:white;
+    padding:20px 60px;
+    display:flex;
+    gap:10px;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+}
+.active{
+    color :orange;
+}
+
+.displayNone{
+    display:none
+}
+
+.move-up{
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    color:#c62739;
+    cursor: pointer;
+    outline:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.move-up i{
+    font-size: 3rem;
+}
+
+
+
+/*  responsive layout... :)) */
+
+/* Hamburger design */
+.jt-prep{
+    display: none;
+}
+
+.struct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+
+.side-navbar{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:rgba(0,0,0,0.8);
+    padding:100px;
+    z-index: 5;
+    transform: translateX(100%);
+    transition: transform 250ms linear;
+}
+.side-nav-elem{
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+    justify-content: center;
+    align-items: center;
+}
+.side-nav{
+    font-size: 3rem;
+    color: yellow;
+}
+.sideAnimation{
+    transform: translateX(0%);
+}
+.cross{
+    position: absolute;
+    top:30px;
+    right:50px;
+    font-size: 4rem;
+    cursor: pointer;
+    color:white;
+    transition: transform 250ms ease;
+
+}
+.cross:hover{
+    animation-name: dingle;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes dingle {
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+    
+    
+}
+
+
+@media (max-width:800px) {
+    .right{
+        display: none;
+    }
+    .jt-prep{
+        display: flex;
+    }
+    
+    
+}
+
+@media (max-width:1000px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:2rem;
+    }
+    #profile-pic{
+        display: none;
+    }
+    #info-box{
+        width:100%;
+    }
+    .alt-profile{
+        display: flex;
+        justify-content: center;
+    }
+}
+
