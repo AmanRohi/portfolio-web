@@ -6,20 +6,7 @@
     const sideNavElem = document.querySelectorAll('.side-nav');
 
 
-    function automaticTyping() {
-        var typed = new Typed('.type', {
-            strings: [
-                "Code Enthusiast",
-                "Full Stack Developer",
-                "Java Programmer"
-            ],
-            startDelay: 20,
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true,
-            loopCount: Infinity,
-        });
-    }
+    
     function navEvent() {
         nav.forEach(element => {
             element.addEventListener('click', (e) => {
@@ -71,7 +58,6 @@
     }
     function widthAjustor() {
         if (window.innerWidth > 800) {
-            console.log('Coming');
             if (!sideNav.classList.contains('displayNode')) {
                 console.log('Coming');
                 sideNav.classList.add('displayNone');
@@ -79,13 +65,13 @@
             }
         }
     }
-    function scrollTop(){
-        const btnScroll=document.querySelector('.move-up');
-        btnScroll.addEventListener('click',()=>{
+    function scrollTop() {
+        const btnScroll = document.querySelector('.move-up');
+        btnScroll.addEventListener('click', () => {
             window.scrollTo({
-                top:0,
-                left:0,
-                behavior:'smooth',
+                top: 0,
+                left: 0,
+                behavior: 'smooth',
             });
         })
     }
@@ -132,6 +118,38 @@
         window.addEventListener('scroll', checkScroll);
 
     }
+    function autoTyper() {
+        const dest = document.querySelector('.type');
+        let strings = [
+            "Code Enthusiast",
+            "Full Stack Developer",
+            "Java Programmer"
+        ];
+        let cur = "|";
+        let j = 0;
+        let i = 0;
+        let value = "";
+        let isBack=false;
+        let id = setInterval(() => {
+            if (j == strings.length) {
+                j = 0;
+                i=0;
+                value="";
+            }
+            else if(i==-1){
+                j++;
+                isBack=false;
+                i=0;
+                value="";
+            }
+            else if (i == strings[j].length) isBack=true;
+            if(j<strings.length && !isBack) value += strings[j][i++];
+            if(isBack) value=strings[j].substring(0,i--);
+            dest.innerText = value + cur;
+        }, 100);
+
+
+    }
 
     function render() {
         navEvent();
@@ -140,9 +158,7 @@
         intialize();
         windowEventListeners();
         scrollTop();
-        /* unComment this line for auto typing effect as not allowed  as per the instruction for the GDSC project 
-        also the line for script for type.js in index.html.*/
-        // automaticTyping(); 
+        autoTyper();
     }
     render();
 })();
